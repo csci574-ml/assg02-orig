@@ -13,7 +13,7 @@
     {
       "name": "Test Assignment Notebook runs all cells cleanly",
       "setup": "export PYTHONPATH=$(pwd)/src",
-      "run": "cd notebooks; jupyter nbconvert --execute Assg-02-Scikit-Learn-statsmodel-Solutions.ipynb --to notebook",
+      "run": "cd notebooks; jupyter nbconvert --execute Assg-02-Scikit-Learn-statsmodel.ipynb --to notebook",
       "input": "",
       "output": "",
       "comparison": "included",
