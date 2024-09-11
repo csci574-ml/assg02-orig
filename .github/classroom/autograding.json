@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "Show python versions",
+      "setup": "",
+      "run": "python src/python-versions.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "Test Assignment Notebook runs all cells cleanly",
+      "setup": "export PYTHONPATH=$(pwd)/src",
+      "run": "cd notebooks; jupyter nbconvert --execute Assg-02-Scikit-Learn-statsmodel-Solutions.ipynb --to notebook",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 1 test task1_sklearn linear regression",
+      "setup": "",
+      "run": "python src/Task1sklearn.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 1 test task1_statsmodel linear regression",
+      "setup": "",
+      "run": "python src/Task1statsmodel.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 2 test task2_sklearn logistic regression",
+      "setup": "",
+      "run": "python src/Task2sklearn.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 2 test task2_statsmodel logistic regression",
+      "setup": "",
+      "run": "python src/Task2statsmodel.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
