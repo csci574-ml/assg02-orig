@@ -1,6 +1,7 @@
 import doctest
 import math
-
+import unittest
+import test_assg_tasks
 
 def run_doctests(func, globs):
     """This function is meant to run inside of an iPython notebook.  You
@@ -23,6 +24,24 @@ def run_doctests(func, globs):
     doctest.run_docstring_examples(func, globs, verbose=True, name=func.__name__)
     return func
 
+def run_unittests(test_names):
+    """Given a list of test names, discover, load and run the given unittests.
+
+    Params
+    ------
+    test_names - a list of string names of test classes to discover, build a test
+       suite of, and run the tests
+
+    Returns
+    -------
+    test_results - returns the test results from the unittest test runner
+    """
+    #suite = unittest.TestLoader().loadTestsFromModule(test_assg_tasks)
+    loader = unittest.TestLoader()
+    suite = loader.loadTestsFromNames(test_names, test_assg_tasks)
+    results = unittest.TextTestRunner(verbosity=2).run(suite)
+    return results
+
 
 def isclose(actual, expected, rel_tol=1e-04):
     """Wraper around the math.isclose() function, where
@@ -35,3 +54,4 @@ def isclose(actual, expected, rel_tol=1e-04):
     else:
         msg = "False: expected %f but actual value %f" % (expected, actual)
         return msg
+

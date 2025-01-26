@@ -2,6 +2,8 @@
 .ipynb_checkpoints/*
 **/.ipynb_checkpoints/*
 *.vagrant/*
+_trial_marker/*
+_trial_temp/*
 
 *.acn
 *.swp

@@ -31,7 +31,7 @@ COPY add-notice.sh /tmp/library-scripts/
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PATH=/opt/conda/bin:$PATH \
-    PYTHONPATH=$PYTHONPATH:/workspaces/assg02-solution/src
+    PYTHONPATH=$PYTHONPATH:/workspaces/assg02/src
 ARG USERNAME=vscode
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends \

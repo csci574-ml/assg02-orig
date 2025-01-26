@@ -61,20 +61,14 @@ $(assg_doc) : README.md
 ##
 .PHONY : unit-tests
 unit-tests :
-	-python src/Task1sklearn.py -v
-	@printf "\n\n"
-	-python src/Task1statsmodel.py -v
-	@printf "\n\n"
-	-python src/Task2sklearn.py -v
-	@printf "\n\n"
-	-python src/Task2statsmodel.py -v
+	python -m twisted.trial test_assg_tasks
 
 ## clean        : Remove auto-generated files for a completely
 ##                clean rebuild
 ##
 .PHONY : clean
 clean  :
-	$(RM) *.o *# *~ nohup.out
+	$(RM) *.o *# *~
 
 
 ## help         : Get all build targets supported by this build.
